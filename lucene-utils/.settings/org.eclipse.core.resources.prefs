@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/main/java/lucene/utils/utils/BooleanQueryUtil.java=UTF-8
+encoding//src/main/java/lucene/utils/utils/EntityHelper.java=UTF-8
+encoding//src/main/java/lucene/utils/utils/FuzzyQueryUtil.java=UTF-8
+encoding//src/main/java/lucene/utils/utils/LuceneFilter.java=UTF-8
+encoding//src/main/java/lucene/utils/utils/LuceneIKUtil.java=UTF-8
+encoding//src/main/java/lucene/utils/utils/MatchAllDocsQueryUtil.java=UTF-8
+encoding//src/main/java/lucene/utils/utils/MultiFieldQueryParserUtil.java=UTF-8
+encoding//src/main/java/lucene/utils/utils/PhraseQueryUtil.java=UTF-8
+encoding//src/main/java/lucene/utils/utils/PrefixQueryUtil.java=UTF-8
+encoding//src/main/java/lucene/utils/utils/TermRangeQueryUtil.java=UTF-8
+encoding//src/test/java/lucene/utils/entiry/test/DataFactory.java=UTF-8
+encoding//src/test/java/lucene/utils/entiry/test/Medicine.java=UTF-8
+encoding//src/test/java/lucene/utils/utils/test/LuceneIKUtilTest.java=UTF-8
