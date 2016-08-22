@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo        
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/tx
+         http://www.springframework.org/schema/tx/spring-tx.xsd
+        ">
+
+	<bean id="wgh-dubbo-properties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="location" value="classpath:wgh-dubbo.properties" />
+	</bean>
+
+	<import resource="classpath*:/wgh-dubbo-cache.xml" />
+	<import resource="classpath*:/wgh-dubbo-service-client.xml" />
+	<import resource="classpath*:/wgh-dubbo-service-server.xml" />
+
+	<context:annotation-config />
+	<context:component-scan base-package="wgh.dubbo" />
+	<!-- dozer --><!-- <bean id="dozer" class="org.dozer.spring.DozerBeanMapperFactoryBean"> 
+		<property name="mappingFiles"> <list> <value>classpath*:dozer-mapping.xml</value> 
+		</list> </property> </bean> -->
+	<!-- dataSource -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		destroy-method="close">
+		<property name="url" value="${hibernate.connection.url}" />
+		<property name="username" value="${hibernate.connection.username}" />
+		<property name="password" value="${hibernate.connection.password}" />
+
+		<!-- 配置初始化大小、最小、最大 -->
+		<property name="initialSize" value="${hibernate.connection.initialSize}" />
+		<property name="minIdle" value="${hibernate.connection.minIdle}" />
+		<property name="maxActive" value="${hibernate.connection.max_active}" />
+		<!-- 配置获取连接等待超时的时间 -->
+		<property name="maxWait" value="${hibernate.connection.max_wait}" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis"
+			value="${hibernate.connection.timeBetweenEvictionRunsMillis}" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis"
+			value="${hibernate.connection.minEvictableIdleTimeMillis}" />
+
+		<property name="validationQuery" value="SELECT 'x'" />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+
+		<!-- 打开removeAbandoned功能, 1800秒即30分钟, 关闭abanded连接时输出错误日志 -->
+		<property name="removeAbandoned" value="${hibernate.connection.removeAbandoned}" />
+		<property name="removeAbandonedTimeout"
+			value="${hibernate.connection.removeAbandonedTimeout}" />
+		<property name="logAbandoned" value="${hibernate.connection.logAbandoned}" />
+
+		<!-- mysql可关闭PSCache，并且指定每个连接上PSCache的大小 -->
+		<property name="poolPreparedStatements"
+			value="${hibernate.connection.pool_prepared_statements}" />
+		<!-- <property name="maxPoolPreparedStatementPerConnectionSize" value="20" 
+			/> -->
+		<property name="defaultAutoCommit" value="${hibernate.connection.default_auto_commit}" />
+
+		<!-- 配置监控统计拦截的filters -->
+		<property name="filters" value="wall,stat" />
+	</bean>
+
+
+	<!-- SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+				<prop key="hibernate.cache.use_second_level_cache">fasle</prop>
+			</props>
+		</property>
+		<!-- 添加实体 -->
+		<property name="packagesToScan">
+			<list>
+				<value>wgh.dubbo.persistence.impl.entity</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 配置事务管理 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 配置注解实现管理事务（cglib：proxy-target-class="true"） -->
+	<tx:annotation-driven transaction-manager="transactionManager"
+		proxy-target-class="true" />
+
+
+
+</beans>

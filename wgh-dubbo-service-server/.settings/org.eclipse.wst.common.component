@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="wgh-dubbo-service-server">
+        <wb-resource deploy-path="/" source-path="/target/m2e-jee/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/testresources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/config"/>
+        <dependent-module archiveName="wgh-dubbo-service-client-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wgh-dubbo-service-client/wgh-dubbo-service-client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wgh-dubbo-persistence-impl-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wgh-dubbo-persistence-impl/wgh-dubbo-persistence-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wgh-dubbo-cache-impl-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wgh-dubbo-cache-impl/wgh-dubbo-cache-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wgh-dubbo-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wgh-dubbo-common/wgh-dubbo-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/wgh-dubbo-service-server/src/main/webapp/WEB-INF/classes"/>
+        <property name="me-merge-utility-modules" value="true"/>
+        <property name="context-root" value="wgh-dubbo-service-server"/>
+    </wb-module>
+</project-modules>
