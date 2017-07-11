@@ -9,8 +9,8 @@
 
 	<groupId>wgh-dubbo-persistence</groupId>
 	<artifactId>wgh-dubbo-persistence</artifactId>
-
-
+	<packaging>pom</packaging>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>wgh-dubbo-persistence</name>
 	<url>http://maven.apache.org</url>
 
@@ -44,6 +44,8 @@
 			<version>1.0.20</version>
 		</dependency>
 	</dependencies>
-	<packaging>pom</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<modules>
+		<module>../wgh-dubbo-persistence</module>
+		<module>../wgh-dubbo-persistence-impl</module>
+	</modules>
 </project>

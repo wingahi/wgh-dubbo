@@ -18,7 +18,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java-version>1.7</java-version>
-		<org.springframework-version>4.2.5.RELEASE</org.springframework-version>
+		<spring.version>4.2.5.RELEASE</spring.version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 
@@ -129,11 +129,6 @@
 			<artifactId>wgh-dubbo-service-client</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>wgh-dubbo-service</groupId>
-			<artifactId>wgh-dubbo-extend-service-client</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
 		<dependency>
@@ -159,6 +154,7 @@
 			<artifactId>spring-oxm</artifactId>
 			<version>4.2.5.RELEASE</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>

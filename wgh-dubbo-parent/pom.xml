@@ -88,6 +88,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<!-- spring end -->
 		<!-- log -->
@@ -147,12 +148,8 @@
 			<version>0.8</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-	<!-- 	<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.8.9</version>
-		</dependency>
- -->
+		<!-- <dependency> <groupId>org.aspectj</groupId> <artifactId>aspectjweaver</artifactId> 
+			<version>1.8.9</version> </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/concurrent/concurrent -->
 		<dependency>
@@ -160,6 +157,13 @@
 			<artifactId>concurrent</artifactId>
 			<version>1.3.4</version>
 		</dependency>
-		
+
 	</dependencies>
+
+	<modules>
+		<module>../wgh-dubbo-persistence</module>
+		<module>../wgh-dubbo-service</module>
+		<module>../wgh-dubbo-openapi-server</module>
+		<module>../wgh-dubbo-cache</module>
+	</modules>
 </project>

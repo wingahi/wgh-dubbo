@@ -1,7 +1,6 @@
 package concurrent.utils.utils;
 
 import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -21,8 +20,8 @@ public class CyclicBarrierUtil extends BaseCyclicBarrier {
 		@SuppressWarnings("unused")
 		class ExecuteThread implements Runnable {
 
-			private AbstrackLimitCountExecutor executor;
-			private CyclicBarrier cyclicBarrier;
+			private final AbstrackLimitCountExecutor executor;
+			private final CyclicBarrier cyclicBarrier;
 
 			@SuppressWarnings("unused")
 			public ExecuteThread(AbstrackLimitCountExecutor executor,

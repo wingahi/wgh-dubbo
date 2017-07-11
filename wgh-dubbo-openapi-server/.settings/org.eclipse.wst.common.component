@@ -10,7 +10,7 @@
         <dependent-module archiveName="wgh-dubbo-cache-impl-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wgh-dubbo-cache-impl/wgh-dubbo-cache-impl">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="wgh-dubbo-extend-service-client-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wgh-dubbo-extend-service-client/wgh-dubbo-extend-service-client">
+        <dependent-module archiveName="wgh-dubbo-cache-api-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wgh-dubbo-cache-api/wgh-dubbo-cache-api">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="wgh-dubbo-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wgh-dubbo-common/wgh-dubbo-common">

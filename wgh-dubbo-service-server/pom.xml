@@ -29,10 +29,24 @@
 		</dependency>
 		<dependency>
 			<groupId>wgh-dubbo-persistence</groupId>
+			<artifactId>wgh-dubbo-persistence-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>wgh-dubbo-persistence</groupId>
 			<artifactId>wgh-dubbo-persistence-impl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>wgh-dubbo-cache</groupId>
+			<artifactId>wgh-dubbo-cache-impl</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>wgh-dubbo-cache</groupId>
+			<artifactId>wgh-dubbo-cache-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>wgh-dubbo-service-server</finalName>

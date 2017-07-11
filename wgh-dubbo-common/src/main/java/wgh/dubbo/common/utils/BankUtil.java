@@ -1,29 +1,25 @@
 package wgh.dubbo.common.utils;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
 
 public class BankUtil {
 	public static void main(String[] args) {
-//		String cardNumber = "6212263602037838554";//卡号
-//		System.out.println(cardNumber.substring(cardNumber.length()-6));
-//		String name = getNameOfBank(cardNumber);
-//		System.out.println(name);
+		String cardNumber = "6212263602037838554";//卡号
+		System.out.println(cardNumber.substring(cardNumber.length()-6));
+		String name = getNameOfBank(cardNumber);
+		System.out.println(name);
 		
-		Set<String> bankNameSet=new HashSet();
-		//bankName
-		for (int i = 0; i < bankName.length; i++) {
-			
-			if (!bankNameSet.contains(bankName[i])) {
-				System.out.print("\"");
-				System.out.print(bankName[i]);
-				bankNameSet.add(bankName[i]);
-				System.out.print("\",");
-			}
-			
-		}
+//		Set<String> bankNameSet=new HashSet();
+//		//bankName
+//		for (int i = 0; i < bankName.length; i++) {
+//			
+//			if (!bankNameSet.contains(bankName[i])) {
+//				System.out.print("\"");
+//				System.out.print(bankName[i]);
+//				bankNameSet.add(bankName[i]);
+//				System.out.print("\",");
+//			}
+//			
+//		}
 		
 	}
 

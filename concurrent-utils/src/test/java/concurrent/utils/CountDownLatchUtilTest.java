@@ -4,9 +4,7 @@ import java.util.concurrent.CountDownLatch;
 
 import concurrent.utils.base.AbstrackLimitCountExecutor;
 import concurrent.utils.base.BaseCountDownLatch;
-import concurrent.utils.base.BaseSemaphore;
 import concurrent.utils.utils.CountDownLatchUtil;
-import concurrent.utils.utils.SemaphoreUtil;
 
 public class CountDownLatchUtilTest {
 	static CountDownLatch countDownLatch = new CountDownLatch(5);
@@ -25,6 +23,7 @@ public class CountDownLatchUtilTest {
 					taskExecutorUtil
 							.execute(new AbstrackLimitCountExecutor<TestEntity>(
 									testEntity) {
+								@Override
 								public Object execute(TestEntity testEntity) {
 									// TODO Auto-generated method stub
 									System.out.println("thread-name:"

@@ -16,7 +16,7 @@
 	<bean id="wgh-dubbo-properties"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="ignoreUnresolvablePlaceholders" value="true" />
-		<property name="location" value="classpath:wgh-dubbo.properties" />
+		<property name="location" value="classpath*:/wgh-dubbo.properties" />
 	</bean>
 
 	<import resource="classpath*:/wgh-dubbo-cache.xml" />

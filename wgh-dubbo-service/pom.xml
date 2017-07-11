@@ -122,4 +122,8 @@
 			<version>1.2-SNAPSHOT</version> </dependency> -->
 
 	</dependencies>
+	<modules>
+		<module>../wgh-dubbo-service-client</module>
+		<module>../wgh-dubbo-service-server</module>
+	</modules>
 </project>

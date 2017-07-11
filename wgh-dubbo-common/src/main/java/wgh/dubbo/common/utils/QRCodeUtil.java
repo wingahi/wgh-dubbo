@@ -422,32 +422,6 @@ public class QRCodeUtil
 
 	}
 
-	public static void main(String[] args) throws Exception
-	{
-		
-		QRCodeUtil.encodeTemp("http://t.fmsecret.cn/fmb-openapi-server/rest/wx/redirectUrlGetOpenId?type=10&uid=100000&id=1", "E:\\logo.png", "E:\\", true);
-		
-		BufferedImage image = QRCodeUtil.encodeToByteData("http://t.fmsecret.cn/fmb-openapi-server/rest/wx/redirectUrlGetOpenId?type=10&uid=100000&id=1", "E:\\logo.png", true);// 二维码生成加入Logo
-//		// BufferedImage image =
-//		// QRCodeUtil.encodeToByteData("https://www.baidu.com/s?wd=%E4%BA%8C%E7%BB%B4%E7%A0%81&rsv_spt=1&rsv_iqid=0xe07e392e000555c3&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=98012088_dg&rsv_enter=1&rsv_sug3=1&rsv_sug1=1&rsv_sug7=100&rsv_t=192bTluL2R2zjsgGztt3um4Y6G4YgJ7Gyr6uLMokQYxipPWpium9kv1NUeymf3jMzkc&rsv_sug2=0&inputT=2089&rsv_sug4=2090",
-//		// "E:\\logo.png", true);// 二维码生成加入Logo
-//
-//		// QRCodeUtil.encodeTemp("http://t.fmsecret.cn/fmb-openapi-server/rest/wx/redirectUrlGetOpenId?type=10&uid=100000&id=1",
-//		// "E:\\logo.png", "E:\\", true);
-//		// String path =
-//		// QRCodeUtil.class.getClassLoader().getResource("1.jpg").getPath();
-//		// System.out.println("path:" + path);
-//		URL url = new URL("http://7xoor9.com1.z0.glb.clouddn.com/user/1454421233266.jpg");
-//		HttpURLConnection httpconn = (HttpURLConnection) url.openConnection(); // 试图连接并取得返回状态码
-//		BufferedImage imageHeader = ImageIO.read(httpconn.getInputStream()); // 本地图片
-//		//
-//
-//		QRCodeUtil.encode(QRCodeUtil.class.getClassLoader().getResource("shareLoginSmall.png").getPath(), image, "E:\\", false, null, null, Font.PLAIN, 24, null);
-
-		// System.out.println(QRCodeUtil.encodeByte(path, image, false, "张三",
-		// "宋体", Font.PLAIN, 30, imageHeader).length);
-
-	}
 
 	/**
 	 * 图片剪切

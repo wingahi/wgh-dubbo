@@ -25,5 +25,15 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/wgh-dubbo-common"/>
+	<classpathentry kind="lib" path="C:/Users/wingahi/.m2/repository/com/googlecode/genericdao/dao-hibernate/1.2.0/dao-hibernate-1.2.0.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="com.googlecode.genericdao"/>
+			<attribute name="maven.artifactId" value="dao-hibernate"/>
+			<attribute name="maven.version" value="1.2.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
